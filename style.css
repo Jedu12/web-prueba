@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+header, .container-menu, ul, li, a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 15px;
+    color: black;
+}
+
+header {
+    position: fixed; /* Fija el header en la parte superior de la página */
+    top: 0; /* Alinea el header en la parte superior */
+    left: 0; /* Alinea el header en la parte izquierda */
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+    background-color: #fff; /* Color de fondo del header */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para el header */
+}
+
+.conce, .jov {
+    font-size: 20px;
+}
+
+.jov {
+    color: rgb(123, 66, 175);
+}
+
+.rss {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.rss .face {
+    width: 24px;
+    height: 24px;
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 30px; /* Este padding se aplicará solo en pantallas pequeñas */
+}
+
+button i {
+    font-size: 22px;
+}
+
+.nav-heder a:hover {
+    border-radius: 10px;
+    background-color: rgb(123, 66, 175); /* Cambia el color de fondo al hacer hover */
+    color: rgb(255, 255, 255); /* Cambia el color del texto al hacer hover */
+}
+
+/*
+.igle{
+    display: flex;
+    width: 500px;
+    height: 690px;
+    border-radius: 10px;
+    
+
+}
+
+.inicio{
+
+    background-color: rgb(123, 66, 175);
+    color: aliceblue;
+
+}
+
+
+section{
+    display: flex;
+    margin: 10vh;
+    border-radius: 10px;
+}
+
+*/
+
+
+.inicio {
+    display: flex;
+    margin: 20vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(123, 66, 175);
+    color: aliceblue;
+    border-radius: 15px;
+}
+
+
+.inicio .igle {
+    order: 2; /* Mueve la imagen a la derecha */
+    width: 40%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 15px;
+    
+}
+
+.contenedor-inicio {
+    order: 1; /* Mueve el texto a la izquierda */
+    width: 55%; /* Ajusta el ancho del contenedor de texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.titulo {
+    /*display: flex;
+    justify-content: center;*/
+    font-size: 24px;
+    margin-bottom: 10px;
+    /*background-color: #fff;
+    border-radius: 10px;
+    color: #802883;*/
+}
+
+.inicio p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.btn-maps{
+    margin: 5px;
+    padding: 10px;
+    color: rgb(48, 40, 46);
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+.inicio {
+    box-shadow: 0px 0px 0px 0px;
+    
+}
+
+
+.seccion-nosotros {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho máximo según necesites */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.acerca {
+    font-size: 2em; /* Ajusta el tamaño del título según necesites */
+    margin-bottom: 200px; /* Espacio debajo del título */
+    text-align: center; /* Centra el texto del título */
+}
+
+.contenedor-personas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px; /* Ajusta el ancho de cada persona */
+}
+
+.persona img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.nombre {
+    color: black;
+}
+
+.apellido {
+    color: purple;
+}
+
+.persona p {
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 10px; /* Añade un poco de padding para evitar que el texto toque los bordes */
+    word-break: break-word; /* Rompe palabras largas para evitar desbordamientos */
+}
+
+
+.persona img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+.persona img:hover {
+    transform: scale(1.2); /* Escala la imagen al 120% de su tamaño original */
+}
+
+
+
+/*aqui va lo mobile*/
+
+.nav-mobile, .inicio-mobile {
+
+    display: none;
+
+}
+
+@media (max-width: 600px) {
+    header, .container-menu, ul, li, a {
+        display: none;
+        flex-direction: column;
+    }
+    .inicio{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-mobile, ul, li, a {
+        display: flex;
+        
+        
+    }
+    .jov-mobile {
+        text-align: center;
+        color: rgb(123, 66, 175);
+    }
+    .nav-mobile .container-menu-mobile .nav-heder-mobile {
+        color: rgb(123, 66, 175);
+    }
+    .nav-mobile a:hover {
+        border-radius: 10px;
+        background-color: rgb(123, 66, 175); /* Cambia el color de fondo al hacer hover */
+        color: rgb(255, 255, 255); /* Cambia el color del texto al hacer hover */
+    }
+    .rss-mobile .face-mobile{  
+        
+        width: 24px;
+        height: 24px;
+
+    }
+    .inicio-mobile{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color:  rgb(123, 66, 175);
+        color: aliceblue;
+        border-radius: 10px;
+        
+    }
+    .contenedor-inicio-mobile{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        
+    }
+    .igle-mobile{
+        width: 600px;
+        height: auto;
+        
+    }
+    .btn-maps-mobile{
+        margin: 5px;
+        padding: 10px;
+        color: rgb(48, 40, 46);
+        background-color: aliceblue;
+        border-radius: 15px;
+    }
+}
+
+
+
